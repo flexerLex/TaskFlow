@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "Fk/Pxm/wroRGWfYwCKPEGdO0wyFm9BF/W+S0sndEHpa1qvnRRYvjlpzlZDNGbF65CZ5s0xn2y8ozplezOMWShg==",
+  "success": true,
+  "projectFilePath": "/Users/admin/Documents/GitHub/TaskFlow/Play.Catalog/src/Play.Catalog.Service/Play.Catalog.Service.csproj",
+  "expectedPackageFiles": [
+    "/Users/admin/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/admin/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/admin/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/Users/admin/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/Users/admin/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/Users/admin/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
