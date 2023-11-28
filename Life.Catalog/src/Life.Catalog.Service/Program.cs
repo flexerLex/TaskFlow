@@ -1,13 +1,16 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Добавляем Swagger для документирования API
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Примерная интеграция с Google Calendar и Telegram
+builder.Services.AddSingleton<IGoogleCalendarService, DummyGoogleCalendarService>();
+builder.Services.AddSingleton<ITelegramService, DummyTelegramService>();
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Настройка Swagger
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -16,27 +19,36 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+// Простая логика для управления задачами
+var tasks = new List<Task>();
 
-app.MapGet("/weatherforecast", () =>
+app.MapPost("/tasks", (Task task) =>
 {
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast")
-.WithOpenApi();
+    tasks.Add(task);
+    // TODO: Добавить задачу в Google Calendar
+    // TODO: Отправить уведомление в Telegram
+    return Results.Ok(task);
+}).WithName("AddTask");
+
+
+
+app.MapGet("/tasks", () =>
+{
+    return Results.Ok(tasks);
+}).WithName("GetTasks");
 
 app.Run();
+
+// Примерные интерфейсы и службы
+public interface IGoogleCalendarService { /* Методы для работы с Google Calendar */ }
+public class DummyGoogleCalendarService : IGoogleCalendarService { /* Простая имплементация */ }
+
+public interface ITelegramService { /* Методы для работы с Telegram */ }
+public class DummyTelegramService : ITelegramService { /* Простая имплементация */ }
+
+// Модель для представления задачи
+public record Task(string Title, string Description, DateTime DueDate);
+//
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
