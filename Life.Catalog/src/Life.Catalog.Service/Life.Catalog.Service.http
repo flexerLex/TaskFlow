@@ -1,0 +1,6 @@
+@Life.Catalog.Service_HostAddress = http://localhost:5070
+
+GET {{Life.Catalog.Service_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
