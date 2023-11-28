@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Life.Catalog", "Life.Catalog", "{F8706022-D8ED-4286-AAF1-EAF3331A3FB5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{834AA51E-CC8B-4BCF-8C61-FCC2C9075109}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Life.Catalog.Service", "Life.Catalog\src\Life.Catalog.Service\Life.Catalog.Service.csproj", "{5EB8E5FA-7609-4268-A7FE-AC85B01AB328}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EB8E5FA-7609-4268-A7FE-AC85B01AB328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EB8E5FA-7609-4268-A7FE-AC85B01AB328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EB8E5FA-7609-4268-A7FE-AC85B01AB328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EB8E5FA-7609-4268-A7FE-AC85B01AB328}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{834AA51E-CC8B-4BCF-8C61-FCC2C9075109} = {F8706022-D8ED-4286-AAF1-EAF3331A3FB5}
+		{5EB8E5FA-7609-4268-A7FE-AC85B01AB328} = {834AA51E-CC8B-4BCF-8C61-FCC2C9075109}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F3CC483C-323C-4717-B0AA-1A307312CC78}
+	EndGlobalSection
+EndGlobal
